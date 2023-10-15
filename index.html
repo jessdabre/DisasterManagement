@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disaster Management Interface</title>
-    <link rel="stylesheet" href="styles.css"> <!-- You can create a separate CSS file for styling -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <script src="script.js"></script><!-- Link to the external JS file -->
+
 </head>
 <body>
-    <header>
-        <h1>Disaster Management Portal</h1>
+    <header class="header">
+        <h1 class="header-title">Disaster Management Portal</h1>
     </header>
     
-    <nav>
-        <ul>
+    <nav class="navigation">
+        <ul class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#prepare">Prepare</a></li>
             <li><a href="#respond">Respond</a></li>
@@ -21,36 +23,36 @@
         </ul>
     </nav>
 
-    <section id="home">
+    <section id="home" class="section">
         <h2>Welcome to Disaster Management Portal</h2>
         <p>This portal provides information and resources for disaster preparedness, response, and recovery.</p>
     </section>
 
-    <section id="prepare">
+    <section id="prepare" class="section">
         <h2>Prepare for a Disaster</h2>
         <p>Learn how to prepare for disasters such as earthquakes, hurricanes, and wildfires.</p>
-        <a href="prepare.html">Learn More</a>
+        <a href="prepare.html" class="btn">Learn More</a>
     </section>
 
-    <section id="respond">
+    <section id="respond" class="section">
         <h2>Respond to a Disaster</h2>
         <p>Find out what to do during a disaster to stay safe and protect your family.</p>
-        <a href="respond.html">Learn More</a>
+        <a href="respond.html" class="btn">Learn More</a>
     </section>
 
-    <section id="recover">
+    <section id="recover" class="section">
         <h2>Recover from a Disaster</h2>
         <p>Discover the steps to take after a disaster to rebuild and recover.</p>
-        <a href="recover.html">Learn More</a>
+        <a href="recover.html" class="btn">Learn More</a>
     </section>
 
-    <section id="resources">
+    <section id="resources" class="section">
         <h2>Additional Resources</h2>
         <p>Access guides, checklists, and emergency contact information.</p>
-        <a href="resources.html">Explore Resources</a>
+        <a href="resources.html" class="btn">Explore Resources</a>
     </section>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2023 Disaster Management Portal</p>
     </footer>
 </body>
