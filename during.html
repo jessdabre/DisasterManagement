@@ -29,13 +29,15 @@
                 zoom: 4,
                 center: location
             });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
         }
         
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeOqeLcqGVfjAPFfvbWjKhbphwxHDR5Mo&callback=initMap">
     </script>
-    <footer class="footer">
-        <p>&copy; 2023 Disaster Management Portal</p>
-    </footer>
+    
 </body>
 </html>
