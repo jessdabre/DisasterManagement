@@ -32,9 +32,10 @@
         <!-- Head content (meta tags, title, stylesheets) here -->
     </head>
     <body>
-        <div id="map" style="height: 400px; width: 50%;"></div>
+        <button class="btn" >Get Location</button>
+        <div id="map" style="height: 400px; width: 100%;"></div>
     
-        <script>
+    <script>
             function initMap() {
                 var location = { lat: 18.520760, lng: 73.855410 };
                 var map = new google.maps.Map(document.getElementById("map"), {
@@ -60,22 +61,47 @@
             });*/
             }
         </script>
-    
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeOqeLcqGVfjAPFfvbWjKhbphwxHDR5Mo&callback=initMap">
         </script>
-        <script>
-            const button = document.querySelector("button");
-            button.addEventListener("click",() => {
+        <!--<script>
+           const button = document.querySelector("button");
+button.addEventListener("click", () => {
+    navigator.geolocation.getCurrentPosition(position => {
+        const { latitude, longitude } = position.coords;
+        const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+        fetch(url)
+            .then(res => res.json()) // Added parentheses here
+            .then(data => {
+                console.table(data.address);
+            })
+            .catch(() => {
+                console.log("Error fetching data from API");
+            });
+    });
+});
+
+        </script>-->
+        <script>const button = document.querySelector("button");
+            button.addEventListener("click", () => {
                 navigator.geolocation.getCurrentPosition(position => {
-                const { latitude, longitude } = position.coords;
-                const url = 'https://nomination.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}';
-                fetch(url).then(res => res.json)).then(data => {
-                    console.table(data.address);
-                }).catch(() => {
-                    console.log("Error fetching data from API");
+                    const { latitude, longitude } = position.coords;
+                    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            // Get the specific address details you want to display
+                            const addressDetails = data.address;
+                            // Convert the address object to a string
+                            const addressString = Object.values(addressDetails).join(', ');
+                            // Display the address string in an alert box
+                            alert(addressString);
+                        })
+                        .catch(() => {
+                            console.log("Error fetching data from API");
+                        });
+                });
             });
-            });
-        </script>
+</script>            
     </body>
     </html>
     
