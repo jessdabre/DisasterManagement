@@ -45,6 +45,10 @@
                     position: location,
                     map: map
                 });
+                 navigator.geolocation.getCurrentPosition(position => {
+                const { latitude, longitude } = position.coords;
+  
+            });
             }
         </script>
     
