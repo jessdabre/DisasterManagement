@@ -8,6 +8,7 @@
         <h1 class="header-title">Prepare for a Disaster</h1>
     </header>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <nav class="navigation">
         <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
@@ -20,41 +21,28 @@
 
 
     <section id="pre" class="section">
-        <p>Learn how to prepare for disasters such as earthquakes, hurricanes, and wildfires.</p>
+        <p>In this section, we will provide information on the precautions that you need to take before disaster also you will Learn how to prepare for disasters such as earthquakes, hurricanes, and wildfires.</p>
         <ul >
-            <li><a href="https://ndma.gov.in/index.php/flood-hazard-atlases">Flood haxard by ndma</a></li>
-            <li><a href="https://ndma.gov.in/index.php/flood-hazard-atlases"><img src="" ></a></li>
+            <li><a href="https://ndma.gov.in/index.php/flood-hazard-atlases">Flood hazard by ndma</a></li>
         </ul>
     </section>
-    <section id="flood" class="section">
-        <h2>Flood</h2>
-        <ul>
-            <li>Information about floods.</li>
-            <li>Information about floods.</li>
-            <li>Information about floods.</li>
-            <li>Information about floods.</li>
-            <li>Information about floods.</li>
-            <li>Information about floods.</li>
-            <li>Information about floods.</li>
-        </ul>
-    </section>
-
-    <!-- Earthquake Section -->
-    <section id="earthquake" class="section">
-        <h2>Earthquake</h2>
-        <ul>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-            <li>Information about earthquakes.</li>
-        </ul>
-    </section>
-
-
+    <div class="container">
+        <div class="left-pane">
+            <ul class="disasters-list">
+                <li><a href="#" onclick="showDescs('one')">Disaster abd emer</a></li>
+                <li><a href="#" onclick="showDescs('two')">Make a plan</a></li>
+                <li><a href="#" onclick="showDescs('three')">Get involved</a></li>
+                <li><a href="#" onclick="showDescs('four')">extra1</a></li>
+                <li><a href="#" onclick="showDescs('five')">extra2</a></li>
+            </ul>
+        </div>
+        <div class="right-pane">
+            <h2 id="disaster-title">Select a section to view description.</h2>
+            <ul id="descs-list">
+                <!-- Chapters will be displayed here -->
+            </ul>
+        </div>
+    </div>
 
 </body>
 </html>
