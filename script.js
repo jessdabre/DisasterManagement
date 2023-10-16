@@ -1,6 +1,6 @@
 function showDescs(disaster) {
     const descs = {
-        one: ['description 1', 'description 2', 'description 3'],
+        Disasters and Emergencies: ['description 1', 'description 2', 'description 3'],
         two: ['description 1', 'description 2', 'description 3'],
         three: ['description 1', 'description 2', 'description 3'],
         four: ['description 1', 'description 2', 'description 3'],
