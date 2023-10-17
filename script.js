@@ -15,16 +15,6 @@ function showDescs(disaster) {
             { text: 'Description 2', link: 'description2.html' },
             { text: 'Description 3', link: 'description3.html' }
         ],
-        four: [
-            { text: 'Description 1', link: 'description1.html' },
-            { text: 'Description 2', link: 'description2.html' },
-            { text: 'Description 3', link: 'description3.html' }
-        ],
-        five: [
-            { text: 'Description 1', link: 'description1.html' },
-            { text: 'Description 2', link: 'description2.html' },
-            { text: 'Description 3', link: 'description3.html' }
-        ]
     };
 
     const descsList = document.getElementById('descs-list');
