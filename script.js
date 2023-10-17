@@ -1,8 +1,8 @@
 function showDescs(disaster) {
     const descs = {
-        Disasters and Emergencies: ['Emergency Alerts', 'Drought', 'Earthquake','Floods', 'Tsunamis'],
-        Make a Plan: ['description 1', 'description 2', 'description 3'],
-        Get Involved: ['description 1', 'description 2', 'description 3'],
+        Disasters: ['Emergency Alerts', 'Drought', 'Earthquake','Floods', 'Tsunamis'],
+        Make: ['description 1', 'description 2', 'description 3'],
+        Get: ['description 1', 'description 2', 'description 3'],
         four: ['description 1', 'description 2', 'description 3'],
         five: ['description 1', 'description 2', 'description 3']
     };
