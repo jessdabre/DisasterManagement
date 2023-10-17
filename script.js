@@ -1,16 +1,16 @@
 function showDescs(disaster) {
     const descs = {
-        one: [
+        Disaster: [
             { text: 'Emergency Alerts', link: 'description1.html' },
             { text: 'Make a plan', link: 'description2.html' },
             { text: 'Get involved', link: 'description3.html' }
         ],
-        two: [
+        Make: [
             { text: 'Description 1', link: 'description1.html' },
             { text: 'Description 2', link: 'description2.html' },
             { text: 'Description 3', link: 'description3.html' }
         ],
-        three: [
+        Get: [
             { text: 'Description 1', link: 'description1.html' },
             { text: 'Description 2', link: 'description2.html' },
             { text: 'Description 3', link: 'description3.html' }
