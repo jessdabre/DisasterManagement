@@ -10,11 +10,23 @@
     <link rel="stylesheet" href="styles.css">
     <nav class="navigation">
         <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pre.html">Pre Disaster Management</a></li>
-            <li><a href="during.html">During Disaster Management</a></li>
-            <li><a href="post.html">Post Disaster Management</a></li>
-            <li><a href="resources.html">Resources</a></li>
+            <div class="homebtn">
+                <li><a href="index.html">Home</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="pre.html">Pre Disaster Management</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="during.html">During Disaster Management</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="post.html">Post Disaster Management</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="resources.html">Resources</a></li>
+            </div>
+            </div>
+        </ul> 
     </nav>
     
     <!DOCTYPE html>
@@ -23,6 +35,10 @@
         <!-- Head content (meta tags, title, stylesheets) here -->
     </head>
     <body>
+
+
+<div class="container">
+    <div class="left-pane">
         <button class="btn" >Get Location</button>
         <div id="map" style="height: 400px; width: 100%;"></div>
     
@@ -54,24 +70,7 @@
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeOqeLcqGVfjAPFfvbWjKhbphwxHDR5Mo&callback=initMap">
         </script>
-        <!--<script>
-           const button = document.querySelector("button");
-button.addEventListener("click", () => {
-    navigator.geolocation.getCurrentPosition(position => {
-        const { latitude, longitude } = position.coords;
-        const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
-        fetch(url)
-            .then(res => res.json()) // Added parentheses here
-            .then(data => {
-                console.table(data.address);
-            })
-            .catch(() => {
-                console.log("Error fetching data from API");
-            });
-    });
-});
-
-        </script>-->
+       
         <script>const button = document.querySelector("button");
             button.addEventListener("click", () => {
                 navigator.geolocation.getCurrentPosition(position => {
@@ -84,24 +83,38 @@ button.addEventListener("click", () => {
                             const addressDetails = data.address;
                             // Convert the address object to a string
                             const addressString = Object.values(addressDetails).join(', ');
-                            // Display the address string in an alert box
                             alert(addressString);
+                            document.querySelector("input[name='Live_adderss']").value = addressString;
+                          
                         })
                         .catch(() => {
                             console.log("Error fetching data from API");
                         });
                 });
             });
-</script>  
-        <form action="https://formsubmit.co/crce.9952.ce@gmail.com" method="POST">
-    <input type="text" name="name" required placeholder="Name">
-    <input type="text" name="PhNo1" required placeholder="Phone Number">
-    <input type="text" name="PhNo2" required placeholder="Phone Number">
-    <input type="text" name="BGroup" required placeholder="Blood group">
-    <input type="text" name="MedCon" required placeholder="MedCondition">
-    <input type="radio" name="gender" value="m" id="male"  />Male</label>
-    <button type="submit">Send</button>
-</form>
+</script> 
+
+    </div>
+    <div class="right-pane">
+        <h2>SOS form</h2>
+        <form action="https://formsubmit.co/crce.9959.ce@gmail.com" method="POST">
+            <input type="text" name="Name" required placeholder="Name">
+            <input type="number" name="Phone_Number_1" required placeholder="Phone Number 1">
+            <input type="number" name="Phone_Number_2" required placeholder="Phone Number 2">
+            <input type="text" name="Blood_Group" required placeholder="Blood Group">
+            <input type="text" name="Medical_Condition" required placeholder="Medical Condition if any">
+            <input type="text" name="Message"  placeholder="Message">
+            <input type="hidden" name="Live_adderss" value=addressString>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/during.html">
+            <input type="hidden" name="_template" value="table">
+            
+            <input type="submit" class="btn" value="Submit" />
+        </form>
+    </div>
+</div>
+
+
     </body>
     </html>
     
