@@ -2,26 +2,53 @@
 <html lang="en">
 <head>
 </head>
-<body>
+<body >
     <header class="header">
         <h1 class="header-title">Disaster Management Portal</h1>
     </header>
     <link rel="stylesheet" href="styles.css">
-    
+   
     <nav class="navigation">
         <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pre.html">Pre Disaster Management</a></li>
-            <li><a href="during.html">During Disaster Management</a></li>
-            <li><a href="post.html">Post Disaster Management</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
+            <div class="homebtn">
+                <li><a href="index.html">Home</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="pre.html">Pre Disaster Management</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="during.html">During Disaster Management</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="post.html">Post Disaster Management</a></li>
+            </div>
+            <div class="homebtn">
+                <li><a href="resources.html">Resources</a></li>
+            </div>
+            </div>
+        </ul> 
     </nav>
     
     <section id="home" class="section">
         <h2>Welcome to Disaster Management Portal</h2>
         <p>This portal provides information and resources for disaster preparedness, response, and recovery.</p>
     </section>
+    <div class="form">
+    <div class="section">Login form</div>
+        <form action="pre.html" >
+          <input type="text" name="Name" required placeholder="Name">
+          <input type="number" name="PhNo1" required placeholder="Phone Number">
+          <input type="number" name="PhNo2" required placeholder="Phone Number">
+          <input type="text" name="BGroup" required placeholder="Blood group">
+          <input type="text" name="MedCon" required placeholder="MedCondition">
+          <button class="btn">Login</button><br>
+          Continue without Login?<a href="pre.html"> Click here</a> 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
