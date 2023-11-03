@@ -271,8 +271,8 @@ input[type="password"],input[type="number"],input[type="text"] {
 }
 
 .links li {
-    display: inline-block;
-    margin-right: 135px; /* Adjust the margin as needed to control spacing */
+    display: flex;
+    flex:1;
 }
 
 .link-container {
