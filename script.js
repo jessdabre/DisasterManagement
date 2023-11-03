@@ -1,38 +1,21 @@
-function showDescs(disaster) {
-    const descs = {
-        Disaster: [
-            { text: 'Emergency Alerts', link: 'description1.html' },
-            { text: 'Make a plan', link: 'description2.html' },
-            { text: 'Get involved', link: 'description3.html' }
-        ],
-        Make: [
-            { text: 'Description 1', link: 'description1.html' },
-            { text: 'Description 2', link: 'description2.html' },
-            { text: 'Description 3', link: 'description3.html' }
-        ],
-        Get: [
-            { text: 'Description 1', link: 'description1.html' },
-            { text: 'Description 2', link: 'description2.html' },
-            { text: 'Description 3', link: 'description3.html' }
-        ],
-    };
 
-    const descsList = document.getElementById('descs-list');
-    const disasterTitle = document.getElementById('disaster-title');
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.toggle-link');
 
-    descsList.innerHTML = '';
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const description = this.nextElementSibling;
 
-    if (descs[disaster]) {
-        descs[disaster].forEach(descItem => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = descItem.link;
-            link.textContent = descItem.text;
-            listItem.appendChild(link);
-            descsList.appendChild(listItem);
+            if (description.style.display === 'block') {
+                description.style.display = 'none';
+            } else {
+                description.style.display = 'block';
+            }
         });
-        disasterTitle.textContent = `Description in ${disaster.charAt(0).toUpperCase() + disaster.slice(1)}`;
-    } else {
-        disasterTitle.textContent = 'No desc available.';
-    }
-}
+    });
+});
+
+
+
+
