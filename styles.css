@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('Images/1.jpg');
+    background-image: url('Images/4.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -23,6 +23,7 @@ body {
 .navigation {
     background-color: #444;
     text-align: center;
+    border: #000000;
     background-color: aqua;
     padding: 0.5rem 0;
 }
@@ -51,11 +52,11 @@ body {
 
 .section {
     padding: 40px;
-    font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     color: black;
+    border: black;
     text-decoration: none;
     
 }
@@ -66,12 +67,9 @@ body {
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-}
 
 .left-pane {
-    width: 500px;
+    width: 65%;
     color: black;
     padding: 20px;
 }
@@ -108,9 +106,24 @@ body {
     text-decoration: none;
 }
 
-.btn {
+.homebtn {
     display: inline-block;
     margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: aqua;
+    background-color: aqua;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.homebtn:hover {
+    background-color: rgb(18, 214, 214);
+}
+.btn {
+    display: block;
+    /*margin-top: 15px;*/
+    margin: 0 auto;  
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
@@ -131,4 +144,179 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.right-pane {
+    flex: 1;
+    color: black;
+    padding: 20px;
+    position: relative; /* Position relative to place the form inside this container */
+}
+
+/* Style the form container */
+.right-pane form {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    flex: 1;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 20%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]:hover {
+
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.7); /* Adjust the color and size as needed */
+}
+
+.right-pane input[type="text"],
+.right-pane input[type="number"],
+.right-pane input[type="password"] {
+    width: 70%;  
+    padding: 10px;  
+    margin: 0 auto;  
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+input[type="password"],input[type="number"],input[type="text"] {
+    width: 70%;  
+    padding: 10px;  
+    margin: 0 auto;  
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Style the submit button */
+.right-pane input[type="submit"] {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.right-pane input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.right-pane .btn {
+    display: block; /* Change to block to center-align */
+    margin: 0 auto; /* Use margin:auto to horizontally center */
+}
+
+
+
+/* Add this CSS to your temp.css file */
+.section p {
+    text-align: center; /* Center-align the text in the section */
+    padding: 10px;
+}
+
+.links{
+
+    padding: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: black;
+}
+.section .links {
+    list-style: none;
+    padding: 0;
+}
+
+.section .links li {
+    margin-bottom: 10px;
+    text-align: center; /* Center-align list items */
+}
+
+.container {
+    display: inline-table;
+    width: 100%;
+   
+}
+
+.container .left-pane,
+.container .right-pane {
+    flex: 1;
+    text-align: center; /* Center-align the content in both panes */
+}
+
+.left-pane, .right-pane {
+    display: table-cell;
+    text-align: center;
+    vertical-align: top; 
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.links li {
+    display: inline-block;
+    margin-right: 135px; /* Adjust the margin as needed to control spacing */
+}
+
+.link-container {
+    margin-bottom: 20px;
+    text-align: center; /* Center the content within the link container */
+}
+
+.link-container a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(94, 241, 94);
+
+}
+
+.toggle-link {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    transition: color 0.2s;
+    display: inline-block; /* Display the links in a block to center them */
+    margin: 0 auto; /* Center the links horizontally */
+}
+
+.toggle-link:hover {
+    color: #000000; /* Change link color on hover */
+}
+
+.description {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.description.open {
+    display: block;
+    opacity: 1;
+}
+
+.description.closed {
+    display: none;
+    opacity: 0;
 }
