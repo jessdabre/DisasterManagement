@@ -229,7 +229,8 @@ input[type="password"],input[type="number"],input[type="text"] {
 }
 
 .links{
-
+    display: flex;
+    flex:1;
     padding: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
