@@ -170,6 +170,15 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.forms {
+    flex: 1;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
 input[type="text"]:hover {
 
