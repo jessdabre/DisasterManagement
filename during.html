@@ -89,20 +89,20 @@
     </div>
     <div class="right-pane">
         <h2>SOS form</h2>
-        <form action="/" name="myform" onsubmit="return validateForm()" method="post">
+        <form action="/" id="contactForm" name="myform" onsubmit="return validateForm()" method="post">
             <div class="formdesign" id="name">
-            Name: <input type="text"name="fname" required><span class="fromerror"><b></b></span>
+            Name: <input type="text" name="fname" required><span class="fromerror"><b></b></span>
             </div>
 
             <div class="formdesign" id="bg">
-            Blood: <input type="text"name="fbg" required><span class="fromerror"><b></b></span>
+            Blood: <input type="text "name="fbg" required><span class="fromerror"><b></b></span>
             </div>
 
-            <div class="formdesign" id="phone1"required>
+            <div class="formdesign" id="phn1"required>
             Phone: <input type="number"name="fphone1"required><span class="fromerror"><b></b></span>
             </div>
 
-            <div class="formdesign" id="phone2"required>
+            <div class="formdesign" id="phn2"required>
             Phone: <input type="number"name="fphone2"required><span class="fromerror"><b></b></span>
             </div>
 
@@ -133,8 +133,8 @@
       };
 
       // Assuming your Firebase database reference is "databaseRef"
-      var databaseRef = firebase.database().ref("your/firebase/path");
-      databaseRef.push(formData);
+     // var databaseRef = firebase.database().ref("your/firebase/path");
+     // databaseRef.push(formData);
 
       // Optionally, you can reset the form after submission
       document.getElementById("contactForm").reset();
