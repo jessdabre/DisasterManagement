@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Head content (meta tags, title, stylesheets) here -->
+   
 </head>
 <body>
     <header class="header">
@@ -29,14 +29,6 @@
         </ul> 
     </nav>
     
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <!-- Head content (meta tags, title, stylesheets) here -->
-    </head>
-    <body>
-
-
 <div class="container">
     <div class="left-pane">
         <button class="btn" >Get Location</button>
@@ -97,26 +89,59 @@
     </div>
     <div class="right-pane">
         <h2>SOS form</h2>
-        <form action="https://formsubmit.co/crce.9959.ce@gmail.com" method="POST">
-            <input type="text" name="Name" required placeholder="Name">
-            <input type="number" name="Phone_Number_1" required placeholder="Phone Number 1">
-            <input type="number" name="Phone_Number_2" required placeholder="Phone Number 2">
-            <input type="text" name="Blood_Group" required placeholder="Blood Group">
-            <input type="text" name="Medical_Condition" required placeholder="Medical Condition if any">
-            <input type="text" name="Message"  placeholder="Message">
-            <input type="hidden" name="Live_adderss" value=addressString>
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://jessdabre.github.io/DisasterManagement/post.html">
-            <input type="hidden" name="_template" value="table">
+        <form action="/" name="myform" onsubmit="return validateForm()" method="post">
+            <div class="formdesign" id="name">
+            Name: <input type="text"name="fname" required><span class="fromerror"><b></b></span>
+            </div>
+
+            <div class="formdesign" id="bg">
+            Blood: <input type="text"name="fbg" required><span class="fromerror"><b></b></span>
+            </div>
+
+            <div class="formdesign" id="phone1"required>
+            Phone: <input type="number"name="fphone1"required><span class="fromerror"><b></b></span>
+            </div>
+
+            <div class="formdesign" id="phone2"required>
+            Phone: <input type="number"name="fphone2"required><span class="fromerror"><b></b></span>
+            </div>
+
+            <div class="formdesign" id="condition"required>
+            Medical Condition: <input type="text"name="fcondition"required><span class="fromerror"><b></b></span>
+            </div>
+
+            <div class="formdesign" id="message"required>
+            Message: <input type="text"name="fmessage"required><span class="fromerror"><b></b></span>
+            </div>
             
-            <input type="submit" class="btn" value="Submit" />
+            <button type="button" onclick="submitForm()">Submit</button>
         </form>
     </div>
 </div>
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="/connection.js"></script>
+  <script>
+    function submitForm() {
+      var formData = {
+        name: document.forms["myform"]["fname"].value,
+        blood: document.forms["myform"]["fbg"].value,
+        phone1: document.forms["myform"]["fphone1"].value,
+        phone2: document.forms["myform"]["fphone2"].value,
+        condition: document.forms["myform"]["fcondition"].value,
+        message: document.forms["myform"]["fmessage"].value
+      };
 
+      // Assuming your Firebase database reference is "databaseRef"
+      var databaseRef = firebase.database().ref("your/firebase/path");
+      databaseRef.push(formData);
 
-    </body>
+      // Optionally, you can reset the form after submission
+      document.getElementById("contactForm").reset();
+    }
+  </script> 
+     </body>
     </html>
     
-</body>
-</html>
+
+
